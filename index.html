@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>itProget lesson</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>itProger</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+      <a href="#" title="Преимущества" onclick="slowScroll('#overview')">Преимущества</a>
+      <a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+      <a href="#" title="FAQ" onclick="slowScroll('#faq')">FAQ</a>
+    </div>
+  </header>
+
+<div id="top">
+    <h1>Программирование</h1>
+    <h3>как способ жизни!</h3>
+</div>
+
+<div id="main">
+  <div class="intro">
+    <h2>Наши услуги помогут вам</h2>
+    <span>Большой выбор технических решений, котоырй помогут вам!</span>
+  </div>
+  <div class="text">
+    <span>Какой-то текст для описания чего либо на сайте, чтобы увидеть как это выглядит.Какой-то текст для описания чего либо на сайте, чтобы увидеть как это выглядит.Какой-то текст для описания чего либо на сайте, чтобы увидеть как это выглядит</span>
+  </div>
+</div>
+
+<div id="overview">
+  <h2>Преимущества</h2>
+  <h4>С нами все происходит просто</h4>
+<div class="img">
+<img src="https://itproger.com/img/courses/1532975967.jpg" alt="">
+<span>Изучение языка Ruby для начинающих</span>
+</div>
+<div class="img">
+<img src="https://itproger.com/img/courses/1530341233.jpg" alt="">
+<span>Урочки ФОтошоп для начинающих</span>
+</div>
+<div class="img">
+<img src="https://itproger.com/img/courses/1523436361.jpg" alt="">
+<span>Изучение языка Swift для начинающих</span>
+</div>
+<div class="img">
+<img src="https://itproger.com/img/courses/1518607198.jpg" alt="">
+<span>Создание игр на Python для начинающих</span>
+</div>
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- импорт и подключение jquery -->
+  <script>                                                                    <!-- скрипт анимации -->
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top                   <!-- получение высоты объекта и скролл до нег оот верха страницы -->
+      }, 500);
+    }
+
+
+  $(document).on("scroll", function () {
+    if($(window).scrollTop() == 0)
+      $("header").removeClass("fixed");
+    else
+      $("header").attr("class", "fixed");
+  });
+  </script>
+</body>
+</html>
